@@ -1,5 +1,7 @@
+import NavBar from "./NavBar";
+
 export default function Home() {
   return (
-   <div>test</div>
+   <div><NavBar/></div>
   );
 }
