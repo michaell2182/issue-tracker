@@ -1,8 +1,11 @@
 import React from 'react'
+import NavBar from '../NavBar'
 
 const issueTracker = () => {
   return (
-    <div>issueTracker</div>
+    <div>
+      <NavBar/>
+      issueTracker</div>
   )
 }
 
