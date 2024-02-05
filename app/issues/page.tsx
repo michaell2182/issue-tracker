@@ -1,11 +1,12 @@
+import { Button } from '@radix-ui/themes'
 import React from 'react'
-import NavBar from '../NavBar'
+
 
 const issueTracker = () => {
   return (
     <div>
-      <NavBar/>
-      issueTracker</div>
+     <Button>Issue Tracker</Button>
+     </div>
   )
 }
 
