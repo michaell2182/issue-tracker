@@ -9,10 +9,11 @@ import { FaPeopleGroup } from "react-icons/fa6";
 import { GoGraph } from "react-icons/go";
 import { CiSettings } from "react-icons/ci";
 import { IoLogOutOutline } from "react-icons/io5";
-
+import { IoFilterSharp } from "react-icons/io5";
 const Sidebar = () => {
   const currentPath = usePathname();
   const [open, setOpen] = useState(true);
+  const [iconsVisible, setIconsVisible] = useState(true);
 
   const links = [
     { label: "Dashboard", href: "/", icon: IoHomeOutline },
@@ -22,10 +23,15 @@ const Sidebar = () => {
     { label: "Settings", href: "/settings", icon: CiSettings },
   ];
 
+  const toggleSidebar = () => {
+    setOpen(!open);
+    setIconsVisible(true); // Ensure icons remain visible when toggling sidebar
+  };
+
   return (
     <section className="">
       <div
-        className={`bg-[#0e0e0e] min-h-screen ${
+        className={`bg-[#050315] min-h-screen ${
           open ? "w-60" : "w-16"
         } transition-width duration-500 rounded-r-2xl shadow-2xl text-gray-100 px-4 overflow-hidden`}
       >
@@ -33,7 +39,7 @@ const Sidebar = () => {
           <HiMenuAlt3
             size={26}
             className="cursor-pointer"
-            onClick={() => setOpen(!open)}
+            onClick={toggleSidebar}
           />
         </div>
         <div className="mt-4 flex flex-col gap-12 relative pl-8">
@@ -45,19 +51,17 @@ const Sidebar = () => {
                 }`}
               >
                 <h2
-                  // style={{
-                  //   transitionDelay: `${i + 3}00ms`,
-                  // }}
+                
                   className={`${
                     link.href === currentPath
                       ? "text-slate-50"
-                      : "text-slate-400 bg-[#0e0e0e] hover:bg-gray-100 rounded-md p-2 hover:text-black transition-colors ease-in-out"
+                      : "text-slate-400 bg-[#050315] hover:bg-[#2c3e50] rounded-md p-2 hover:text-white transition-colors ease-in-out"
                   }`}
                 >
                   <span className="flex items-center">
                     {React.createElement(link.icon, {
                       size: 20,
-                      className: "mr-6",
+                      className: `mr-6 ${iconsVisible ? '' : 'hidden'}`, // Hide icon when iconsVisible is false
                     })}
                     {link.label}
                   </span>
@@ -67,7 +71,7 @@ const Sidebar = () => {
           ))}
           <div className="p-2 border-b-2 border-slate-600"></div>
           <div className="mt-auto p-4 flex items-center translate-y-80">
-            <IoLogOutOutline className="mr-6 size-5" />
+            <IoLogOutOutline className="mr-6 size-5 cursor-pointer" />
             <Link href="/logout">
               <h2 className="block text-slate-400 hover:text-slate-200 transition-colors cursor-pointer">
                 Logout
