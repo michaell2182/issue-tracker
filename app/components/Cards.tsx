@@ -2,12 +2,42 @@ import React from 'react';
 
 const Cards = () => {
   return (
-    <div className="bg-white rounded-xl shadow-md p-6 w-72 ">
-      {/* Card content */}
-      <h2 className="text-xl font-bold mb-4">Card Title</h2>
-      <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.</p>
-      {/* Add more content as needed */}
-    </div>
+    <main className="mt-6">
+      <div className="grid grid-cols-3 gap-14 mt-6">
+        {/* First Card */}
+        <div className="bg-white p-4 rounded-2xl h-56 w-48 shadow-md cursor-pointer ease-in-out transition duration-300 hover:shadow-none">
+          <div className="flex justify-between items-center">
+            <div>
+              <h1 className="text-lg font-semibold center">
+                First Card
+              </h1>
+            </div>
+          </div>
+        </div>
+        
+        {/* Second Card */}
+        <div className="bg-white p-4 rounded-2xl h-56 w-48 shadow-md cursor-pointer ease-in-out transition duration-300 hover:shadow-none">
+          <div className="flex justify-between items-center">
+            <div>
+              <h1 className="text-lg font-semibold center">
+                Second Card
+              </h1>
+            </div>
+          </div>
+        </div>
+        
+        {/* Third Card */}
+        <div className="bg-white p-4 rounded-2xl h-56 w-48 shadow-md cursor-pointer ease-in-out transition duration-300 hover:shadow-none">
+          <div className="flex justify-between items-center">
+            <div>
+              <h1 className="text-lg font-semibold center">
+                Third Card
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   );
 };
 
