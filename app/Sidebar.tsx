@@ -31,7 +31,7 @@ const Sidebar = () => {
   return (
     <section className="">
       <div
-        className={`bg-[#050315] min-h-screen ${
+        className={`bg-[#2C3A4F] min-h-screen ${
           open ? "w-60" : "w-16"
         } transition-width duration-500 rounded-r-2xl shadow-2xl text-gray-100 px-4 overflow-hidden`}
       >
@@ -51,17 +51,16 @@ const Sidebar = () => {
                 }`}
               >
                 <h2
-                
                   className={`${
                     link.href === currentPath
                       ? "text-slate-50"
-                      : "text-slate-400 bg-[#050315] hover:bg-[#2c3e50] rounded-md p-2 hover:text-white transition-colors ease-in-out"
+                      : "text-slate-400 bg-[#2C3A4F] hover:bg-[#455369] rounded-md p-2 hover:text-white transition-colors ease-in-out "
                   }`}
                 >
                   <span className="flex items-center">
                     {React.createElement(link.icon, {
                       size: 20,
-                      className: `mr-6 ${iconsVisible ? '' : 'hidden'}`, // Hide icon when iconsVisible is false
+                      className: `mr-6 ${iconsVisible ? "" : "hidden"}`, // Hide icon when iconsVisible is false
                     })}
                     {link.label}
                   </span>

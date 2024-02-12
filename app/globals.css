@@ -1,3 +1,10 @@
+/* global.css */
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
+
+
+/* Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

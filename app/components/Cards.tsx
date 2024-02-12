@@ -5,7 +5,7 @@ const Cards = () => {
     <main className="mt-6">
       <div className="grid grid-cols-3 gap-14 mt-6">
         {/* First Card */}
-        <div className="bg-white p-4 rounded-2xl h-56 w-48 shadow-md cursor-pointer ease-in-out transition duration-300 hover:shadow-none">
+        <div className="bg-white p-4 rounded-2xl h-56 w-48 shadow-md cursor-pointer ease-linear transition-colors duration-300 hover:bg-[#b4c2dc]">
           <div className="flex justify-between items-center">
             <div>
               <h1 className="text-lg font-semibold center">
@@ -16,7 +16,7 @@ const Cards = () => {
         </div>
         
         {/* Second Card */}
-        <div className="bg-white p-4 rounded-2xl h-56 w-48 shadow-md cursor-pointer ease-in-out transition duration-300 hover:shadow-none">
+        <div className="bg-white p-4 rounded-2xl h-56 w-48 shadow-md cursor-pointer ease-linear transition-colors duration-300 hover:bg-[#b4c2dc]">
           <div className="flex justify-between items-center">
             <div>
               <h1 className="text-lg font-semibold center">
@@ -27,7 +27,7 @@ const Cards = () => {
         </div>
         
         {/* Third Card */}
-        <div className="bg-white p-4 rounded-2xl h-56 w-48 shadow-md cursor-pointer ease-in-out transition duration-300 hover:shadow-none">
+        <div className="bg-white p-4 rounded-2xl h-56 w-48 shadow-md cursor-pointer ease-linear transition-colors duration-300 hover:bg-[#b4c2dc]">
           <div className="flex justify-between items-center">
             <div>
               <h1 className="text-lg font-semibold center">

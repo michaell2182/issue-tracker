@@ -12,8 +12,8 @@ const TopBar = () => {
             className="bg-transparent outline-none placeholder-gray-400 text-gray-700 flex-grow"
             placeholder="Search"
           />
-          <div className="bg-white p-2 rounded-lg relative left-1">
-            <IoFilterSharp className="text-gray-500 scale-110" />
+          <div className="bg-[#56647b] p-2 rounded-lg relative left-1">
+            <IoFilterSharp className="text-white scale-110" />
           </div>
         </div>
         <div className="relative right-80 top-3">
