@@ -10,9 +10,11 @@ import { GoGraph } from "react-icons/go";
 import { CiSettings } from "react-icons/ci";
 import { IoLogOutOutline } from "react-icons/io5";
 import { IoFilterSharp } from "react-icons/io5";
+
 const Sidebar = () => {
   const currentPath = usePathname();
   const [open, setOpen] = useState(true);
+
   const [iconsVisible, setIconsVisible] = useState(true);
 
   const links = [
@@ -22,6 +24,7 @@ const Sidebar = () => {
     { label: "Reports", href: "/report", icon: GoGraph },
     { label: "Settings", href: "/settings", icon: CiSettings },
   ];
+
 
   const toggleSidebar = () => {
     setOpen(!open);
@@ -40,6 +43,7 @@ const Sidebar = () => {
             size={26}
             className="cursor-pointer"
             onClick={toggleSidebar}
+        
           />
         </div>
         <div className="mt-4 flex flex-col gap-12 relative pl-8">
@@ -70,6 +74,7 @@ const Sidebar = () => {
           ))}
           <div className="p-2 border-b-2 border-slate-600"></div>
           <div className="mt-auto p-4 flex items-center translate-y-80">
+            <IoLogOutOutline className="mr-6 size-5 cursor-pointer" />
             <IoLogOutOutline className="mr-6 size-5 cursor-pointer" />
             <Link href="/logout">
               <h2 className="block text-slate-400 hover:text-slate-200 transition-colors cursor-pointer">
