@@ -73,8 +73,7 @@ const Sidebar = () => {
             </Link>
           ))}
           <div className="p-2 border-b-2 border-slate-600"></div>
-          <div className="mt-auto p-4 flex items-center translate-y-80">
-            <IoLogOutOutline className="mr-6 size-5 cursor-pointer" />
+          <div className="mt-auto p-4 flex items-center translate-y-80 relative bottom-8">
             <IoLogOutOutline className="mr-6 size-5 cursor-pointer" />
             <Link href="/logout">
               <h2 className="block text-slate-400 hover:text-slate-200 transition-colors cursor-pointer">
