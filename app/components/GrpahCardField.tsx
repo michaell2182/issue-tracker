@@ -10,7 +10,7 @@ const GraphCardField = (props) => {
       <div className="border bg-white shadow-sm rounded-xl p-4 w-[19rem] h-[8rem]">
         {icon}
         <h1 className="font-semibold p-1"> {title} </h1>
-        <h3> {Description} </h3>
+        <h3> {description} </h3>
       </div>
     </div>
   );
