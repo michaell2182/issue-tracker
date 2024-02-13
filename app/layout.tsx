@@ -5,9 +5,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Theme, ThemePanel } from "@radix-ui/themes";
-// import NavBar from "./NavBar";
+
 import Sidebar from "./Sidebar";
 import MainScreen from "./MainScreen";
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({
           <Sidebar />
           <MainScreen />
         </div>
+        
         <main>{children}</main>
       </body>
     </html>
