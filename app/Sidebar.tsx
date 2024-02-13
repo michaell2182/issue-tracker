@@ -19,7 +19,7 @@ const Sidebar = () => {
 
   const links = [
     { label: "Dashboard", href: "/", icon: IoHomeOutline },
-    { label: "Tickets", href: "/issues/new", icon: BsTicketPerforated },
+    { label: "Tickets", href: "/issues", icon: BsTicketPerforated },
     { label: "Team", href: "/team", icon: FaPeopleGroup },
     { label: "Reports", href: "/report", icon: GoGraph },
     { label: "Settings", href: "/settings", icon: CiSettings },

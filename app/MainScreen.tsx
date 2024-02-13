@@ -3,6 +3,7 @@ import Cards from './components/Cards';
 import TopBar from './components/TopBar';
 import GraphCard from './components/GraphCard';
 import TicketsDashboard from './components/TicketsDashboard';
+import Calendar from './components/CalendarCard';
 const MainScreen = () => {
   return (
     <div className="flex">
@@ -18,6 +19,7 @@ const MainScreen = () => {
         <Cards  />
        <GraphCard/>
        <TicketsDashboard/>
+       <Calendar/>
       </div>
       
     </div>

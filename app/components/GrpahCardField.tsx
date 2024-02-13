@@ -1,6 +1,12 @@
 import React from "react";
 
-const GraphCardField = (props) => {
+type Props = {
+  status: string;
+  icon: JSX.Element;
+  description: string;
+  title: string;
+}
+const GraphCardField = (props: Props) => {
   const { status, icon,description,title } = props;
 
   return (
@@ -9,8 +15,12 @@ const GraphCardField = (props) => {
 
       <div className="border bg-white shadow-sm rounded-xl p-4 w-[19rem] h-[8rem]">
         {icon}
-        <h1 className="font-semibold p-1"> {title} </h1>
-        <h3> {description} </h3>
+        <h1 className="font-semibold relative py-1" style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+          {title}
+        </h1>
+        <h3 style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "normal" }}>
+          {description}
+        </h3>
       </div>
     </div>
   );
