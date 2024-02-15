@@ -28,10 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body style={{ backgroundColor: "#fbfbfe" }}>
-        <div className="flex">
-          <Sidebar />
-          <MainScreen />
-        </div>
+       
         
         <main>{children}</main>
       </body>

@@ -5,7 +5,7 @@ import { FaCircle } from "react-icons/fa";
 const TicketsDashboard = () => {
   return (
     <div className="container">
-      <div className="bg-white border p-4 rounded-2xl relative top-[4rem] h-[27.5rem] w-[65rem] shadow-md cursor-pointer">
+      <div className="bg-white border p-4 rounded-2xl relative top-[4rem] h-[27.5rem] w-[61rem] shadow-md cursor-pointer">
         <div className="flex justify-center gap-4 pr-4 mx-2">
           <GrpahCardField
             status="New"

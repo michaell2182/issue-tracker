@@ -1,7 +1,14 @@
-import NavBar from "./NavBar";
+import MainScreen from "./MainScreen";
+
+import Sidebar from "./Sidebar";
 
 export default function Home() {
   return (
-   <div></div>
+   <div>
+     <div className="flex">
+          <Sidebar />
+          <MainScreen />
+        </div>
+   </div>
   );
 }
