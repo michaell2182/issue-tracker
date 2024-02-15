@@ -3,17 +3,15 @@ import Link from "next/link";
 import React from "react";
 import prisma from "@/prisma/client";
 import IssuseStatusBadge from "../components/IssuseStatusBadge";
-
+import delay from "delay";
 
 const issueTracker = async () => {
   const issues = await prisma?.issue.findMany();
+   await delay(2000);
   return (
     <div>
-      <div className="m-5">
-<Button>
-        <Link href="/issues/new">New Issue</Link>
-</Button>
-</div>
+     
+    
       <Table.Root variant="surface">
         <Table.Header>
           <Table.Row>
