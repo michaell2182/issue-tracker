@@ -2,11 +2,12 @@
 
 import { Skeleton } from "@/app/components";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+
 import React from "react";
-import { AiFillBug } from "react-icons/ai";
-import classnames from "classnames";
+import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
+
 import { useSession } from "next-auth/react";
+
 import {
   Avatar,
   Box,
@@ -14,52 +15,38 @@ import {
   DropdownMenu,
   Flex,
   Text,
+  TextField,
 } from "@radix-ui/themes";
 
 const NavBar = () => {
+  
   return (
-    <nav className="border-b mb-5 px-5 py-3">
+    <div>
+    <nav className="border-b mb-5 px-5 py-3 ">
       <Container>
         <Flex justify="between">
           <Flex align="center" gap="3">
             <Link href="/">
-              <AiFillBug />
+              <div className="flex-1 ">
+                <TextField.Root >
+                  <TextField.Slot>
+                    <MagnifyingGlassIcon height="16" width="16" />
+                  </TextField.Slot>
+                  <TextField.Input radius="large" placeholder="Search For Tickets…" width={"full"}/>
+                </TextField.Root>
+              </div>
             </Link>
-            <NavLinks />
           </Flex>
-          <AuthStatus />
+          <div className="relative -right-[20rem]">
+          <AuthStatus/>
+          </div>
         </Flex>
       </Container>
     </nav>
+  </div>
   );
 };
 
-const NavLinks = () => {
-  const currentPath = usePathname();
-
-  const links = [
-    { label: "Dashboard", href: "/" },
-    { label: "Issues", href: "/issues/list" },
-  ];
-
-  return (
-    <ul className="flex space-x-6">
-      {links.map((link) => (
-        <li key={link.href}>
-          <Link
-            className={classnames({
-              "nav-link": true,
-              "!text-zinc-900": link.href === currentPath,
-            })}
-            href={link.href}
-          >
-            {link.label}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  );
-};
 
 const AuthStatus = () => {
   const { status, data: session } = useSession();

@@ -7,7 +7,7 @@ import { Container, Theme, ThemePanel } from "@radix-ui/themes";
 import NavBar from "./NavBar";
 import AuthProvider from "./auth/Provider";
 import QueryClientProvider from "./QueryClientProvider";
-
+import SideBar from "./SideBar";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -30,6 +30,7 @@ export default function RootLayout({
           <AuthProvider>
             <Theme accentColor="violet">
               <NavBar />
+          <SideBar />
               <main className="p-5">
                 <Container>{children}</Container>
               </main>
