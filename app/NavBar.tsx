@@ -22,7 +22,7 @@ const NavBar = () => {
   
   return (
     <div>
-    <nav className="border-b mb-5 px-5 py-3 ">
+    <nav className=" mb-5 px-5 py-3 shadow-sm ">
       <Container>
         <Flex justify="between">
           <Flex align="center" gap="3">

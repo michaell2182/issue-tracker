@@ -14,7 +14,9 @@ const LatestIssues = async () => {
   });
 
   return (
-    <Card>
+    <div className='relative top-[4rem] border-t pt-5'>
+
+
       <Heading size="4" mb="5">Latest Issues</Heading>
       <Table.Root>
         <Table.Body>
@@ -42,7 +44,8 @@ const LatestIssues = async () => {
           ))}
         </Table.Body>
       </Table.Root>
-    </Card>
+   
+          </div>
   );
 };
 
